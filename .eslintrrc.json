@@ -1,6 +1,6 @@
 {
   "plugins": ["styled-components-a11y"],
-  "extends": ["plugin:styled-components-a11y/recommended", "airbnb", "plugin:prettier/recommended", "prettier/react"],
+  "extends": ["plugin:styled-components-a11y/recommended", "plugin:prettier/recommended", "prettier/react"],
   "env": {
     "browser": true,
     "commonjs": true,
