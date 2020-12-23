@@ -23,7 +23,7 @@ const App = () => (
     <Background />
     <Switch>
       <Route path="/" component={MainScreen} exact />
-      <Route path="/journal">
+      <Route path="/journal" exact>
         <Journal />
       </Route>
       <Route component={Error} />
