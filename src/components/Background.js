@@ -11,6 +11,7 @@ const Container = styled(CenterContainer)`
   object-position: 50% 50%;
   z-index: auto;
   background-color: black;
+  user-select: none;
 `
 
 const Background = () => {

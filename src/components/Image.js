@@ -8,6 +8,7 @@ const Img = styled.img`
   vertical-align: bottom;
   object-fit: cover;
   background-color: black;
+  user-select: none;
 `
 
 const Image = ({ src }) => <Img src={src} />

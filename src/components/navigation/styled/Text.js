@@ -7,9 +7,9 @@ const Text = styled.div`
   position: absolute;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 2rem;
-  font-weight: bold;
   line-height: normal;
   user-select: none;
   z-index: 1;
+  text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
 `
 export default Text
