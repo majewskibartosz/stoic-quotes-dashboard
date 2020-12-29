@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import FadeIn from './Animations/FadeIn'
+import FadeIn from './animations/FadeIn'
 
 const Layer = styled.div`
   display: block;

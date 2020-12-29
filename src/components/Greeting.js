@@ -1,13 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import getGreeting from '../utils/getGreeting'
-
-const Container = styled.div`
-  width: 100%;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-`
+import CenterContainer from '../components/shared-styles/CenterContainer'
 
 const Text = styled.div`
   width: 100%;
@@ -27,9 +21,9 @@ const Text = styled.div`
 `
 
 const Greet = () => (
-  <Container>
+  <CenterContainer>
     <Text>{getGreeting(new Date(Date.now()).getHours())}</Text>
-  </Container>
+  </CenterContainer>
 )
 
 export default Greet

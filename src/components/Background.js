@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Image from './Image'
+import CenterContainer from './shared-styles/CenterContainer'
 
-const Container = styled.div`
+const Container = styled(CenterContainer)`
   width: 100%;
   height: 100%;
   margin: 0;

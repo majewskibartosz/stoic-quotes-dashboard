@@ -1,12 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import CenterContainer from './shared-styles/CenterContainer'
 
-const Container = styled.div`
-  width: 100%;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-`
 const Text = styled.h1`
   width: 100%;
   color: white;
@@ -25,9 +20,9 @@ const Text = styled.h1`
 `
 
 const Error = () => (
-  <Container>
+  <CenterContainer>
     <Text>Oops! Page not found!</Text>
-  </Container>
+  </CenterContainer>
 )
 
 export default Error

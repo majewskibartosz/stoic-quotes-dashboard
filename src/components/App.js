@@ -8,7 +8,7 @@ import Background from './Background'
 import Overlay from './Overlay'
 import Journal from './Journal'
 import Error from './Error'
-import Navbar from './Navigation/Navbar'
+import Navbar from './navigation/Navbar'
 
 const GlobalStyle = createGlobalStyle`
   ${reset};

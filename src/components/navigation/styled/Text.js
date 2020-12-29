@@ -1,6 +1,4 @@
-import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 
 const Text = styled.div`
   width: 100%;
@@ -14,16 +12,4 @@ const Text = styled.div`
   user-select: none;
   z-index: 1;
 `
-
-const StyledLink = styled(Link)`
-  color: white;
-`
-
-const Navbar = () => (
-  <Text>
-    <Link to="/">main </Link>
-    <Link to="/journal">journal </Link>
-  </Text>
-)
-
-export default Navbar
+export default Text

@@ -1,14 +1,10 @@
 /* eslint-disable no-undef */
 import React from 'react'
 import styled from 'styled-components'
+import CenterContainer from './shared-styles/CenterContainer'
+import Text from './shared-styles/Text'
 
-const Container = styled.div`
-  width: 100%;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-`
-const Text = styled.h1`
+const JournalText = styled(Text)`
   width: 100%;
   color: white;
   text-align: center;
@@ -25,9 +21,9 @@ const Text = styled.h1`
   transform: translate(-50%, 60%);
 `
 const Journal = () => (
-  <Container>
-    <Text>This is Journal.</Text>
-  </Container>
+  <CenterContainer>
+    <JournalText>This is Journal.</JournalText>
+  </CenterContainer>
 )
 
 export default Journal
