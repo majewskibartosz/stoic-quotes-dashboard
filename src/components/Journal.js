@@ -20,8 +20,28 @@ const JournalText = styled(Text)`
   left: 50%;
   transform: translate(-50%, 60%);
 `
+const Button = styled.button`
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`
+
+const NavButton = styled(Button)`
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+  z-index: 1;
+`
+
 const Journal = () => (
   <CenterContainer>
+    <Button>Jitre </Button>
     <JournalText>This is Journal.</JournalText>
   </CenterContainer>
 )
