@@ -26,6 +26,7 @@ const useRequest = (url, useCache = true) => {
   useEffect(() => {
     useCache && getCachedData()
     getFreshData()
+    // eslint-disable-next-line
   }, [])
 
   const loading = !data && !error
