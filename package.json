@@ -1,4 +1,8 @@
 {
   "name": "stoic-quotes-dashboard",
-  "packageManager": "yarn@3.4.1"
+  "packageManager": "yarn@3.4.1",
+ "engines" : { 
+   "npm" : ">=8.0.0 <=9.4.1",
+   "node" : ">=16.0.0 <=19.6.0"
+ }
 }
