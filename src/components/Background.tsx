@@ -13,7 +13,7 @@ const Container = styled.div`
 `
 
 const Background = () => {
-  const [photo, setPhoto] = useState()
+  const [photo, setPhoto] = useState<string | undefined>()
 
   useEffect(() => {
     const url = 'https://source.unsplash.com/collection/477172/1600x900/daily'
