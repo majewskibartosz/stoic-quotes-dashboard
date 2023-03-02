@@ -16,7 +16,7 @@ const Background = () => {
   const [photo, setPhoto] = useState<string | undefined>()
 
   useEffect(() => {
-    const url = 'https://source.unsplash.com/collection/477172/1600x900/daily'
+    const url = 'https://source.unsplash.com/collection/477172/1600x900/daily' ?? ''
     const getRandomPhoto = () => {
       setPhoto(url)
     }
@@ -25,7 +25,7 @@ const Background = () => {
 
   return (
     <Container>
-      <Image src={photo} />
+      <Image src={photo ? photo : ''} />
     </Container>
   )
 }

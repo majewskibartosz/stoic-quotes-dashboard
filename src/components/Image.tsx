@@ -10,6 +10,6 @@ const Img = styled.img`
   background-color: black;
 `
 
-const Image = ({ src }) => <Img src={src} />
+const Image = ({ src }: {src: string}) => <Img src={src} />
 
 export default Image
