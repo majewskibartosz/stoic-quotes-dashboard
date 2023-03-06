@@ -1,7 +1,12 @@
+import PropTypes from 'prop-types';
 import { mantras, getMantra } from './getMantra'
 import getRandomIntInclusive from './getRandomIntInclusive'
 
-const getGreeting = (time) => {
+interface Props {
+  time: number;
+}
+
+const getGreeting = ({time}: Props) => {
   let index = null
   if (time <= 12) {
     index = 0
@@ -16,6 +21,10 @@ const getGreeting = (time) => {
   const randomNum = getRandomIntInclusive(1, 6)
 
   return randomNum <= 3 ? greeting[index] : currentMantra
+}
+
+getGreeting.propTypes = {
+  time: PropTypes.number.isRequired,
 }
 
 export default getGreeting
