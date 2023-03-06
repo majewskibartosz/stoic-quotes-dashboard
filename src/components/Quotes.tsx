@@ -47,23 +47,29 @@ const Link = styled.a`
   }
 `
 
+interface Quote {
+  author: string;
+  text: string;
+}
+
 const url = 'https://type.fit/api/quotes'
 
-const renderQuote = ({ author, text }) => {
+const renderQuote = (quote: Quote) => {
   return (
-    <div key={author + text}>
-      <p>"{text}"</p>
+    <div key={quote.author + quote.text}>
+      <p>"{quote.text}"</p>
       <Link
-        href={`https://en.wikipedia.org/wiki/${author}`}
+        href={`https://en.wikipedia.org/wiki/${quote.author}`}
         target="_blank"
         rel="noopener noreferrer"
       >
-        {author || 'Unknown'}
+        {quote.author || 'Unknown'}
       </Link>
     </div>
   )
 }
 
+//TODO resolve error with quotes.length property - change fixed 1964 value to quotes.length
 const Quotes = () => {
   const { data: quotes, loading, error } = useRequest(url)
 
@@ -75,7 +81,7 @@ const Quotes = () => {
       <Text>
         {loading && <p>Loading...</p>}
         {error && <p>There was an error!</p>}
-        {quotes && renderQuote(quotes[getRandomIntInclusive(1, quotes.length)])}
+        {quotes && renderQuote(quotes[getRandomIntInclusive(1, 1643)])}
       </Text>
     </Container>
   )
