@@ -24,8 +24,12 @@ const Container = styled.div`
   z-index: 1;
 `
 
-const Clock = () => {
-  const [timer, setTimer] = useState({ date: new Date(Date.now()) })
+interface Timer {
+  date: Date;
+}
+
+const Clock: React.FC = () => {
+  const [timer, setTimer] = useState<Timer>({ date: new Date(Date.now()) })
 
   useEffect(() => {
     const timerID = setInterval(() => tick(), 1000)
