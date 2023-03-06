@@ -24,7 +24,7 @@ const Text = styled.h1`
   transform: translate(-50%, 60%);
 `
 
-const Error = () => (
+const Error: React.FC = () => (
   <Container>
     <Text>Oops! Page not found!</Text>
   </Container>
