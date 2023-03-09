@@ -52,6 +52,10 @@ interface Quote {
   text: string;
 }
 
+interface QuotesProps {
+  useCache: boolean;
+}
+
 const url = 'https://type.fit/api/quotes'
 
 const renderQuote = (quote: Quote) => {
@@ -70,7 +74,7 @@ const renderQuote = (quote: Quote) => {
 }
 
 //TODO resolve error with quotes.length property - change fixed 1964 value to quotes.length
-const Quotes = () => {
+const Quotes = ({useCache}: QuotesProps) => {
   const { data: quotes, loading, error } = useRequest(url)
 
   if (loading) return <Text>Loading...</Text>

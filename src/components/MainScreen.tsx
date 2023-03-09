@@ -5,11 +5,12 @@ import Quotes from './Quotes'
 import Clock from './Clock'
 import Greeting from './Greeting'
 
+
 const MainScreen = () => (
   <div>
     <Clock />
     <Greeting />
-    <Quotes useCache />
+    <Quotes useCache={true} />
   </div>
 )
 
