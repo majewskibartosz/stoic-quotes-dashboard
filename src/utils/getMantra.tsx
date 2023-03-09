@@ -1,7 +1,6 @@
 import getRandomIntInclusive from './getRandomIntInclusive'
-import PropTypes from 'prop-types';
 
-interface MantrasDictionary {
+export type MantrasDictionary = {
   [key: number]: string
 }
 
@@ -63,10 +62,6 @@ export const mantras: string[] = [
 ]
 
 export const getMantra = (dictionary: MantrasDictionary): string => {
-  const randomNumber = getRandomIntInclusive(1, mantras.length - 1)
-  return dictionary[randomNumber]
-}
-
-getMantra.propTypes = {
-  dictionary: PropTypes.objectOf(PropTypes.string).isRequired,
+  const randomNumber = getRandomIntInclusive({ min: 0, max: mantras.length - 1 });
+  return dictionary[randomNumber];
 }
