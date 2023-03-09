@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { readFromCache, writeToCache } from '../utils/cache'
 
-const useRequest = (url, useCache = true) => {
+
+const useRequest = (url: string, useCache = true) => {
   const [data, setData] = useState()
   const [error, setError] = useState()
 
@@ -13,7 +14,7 @@ const useRequest = (url, useCache = true) => {
       const { data: response } = await axios.get(url)
       useCache && writeToCache(url, response)
       setData(response)
-    } catch (e) {
+    } catch (e: any) {
       setError(e)
     }
   }
