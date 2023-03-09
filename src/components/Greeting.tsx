@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import styled from 'styled-components'
 import getGreeting from '../utils/getGreeting'
 
@@ -28,8 +29,10 @@ const Text = styled.div`
 
 const Greet = () => (
   <Container>
-    <Text>{getGreeting(new Date(Date.now()).getHours())}</Text>
+    <Text>{getGreeting({time: new Date(Date.now()).getHours()})}</Text>
   </Container>
 )
+
+
 
 export default Greet
