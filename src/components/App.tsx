@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
 
@@ -18,10 +18,10 @@ const App = () => (
     <GlobalStyle />
     <Overlay />
     <Background />
-    <Switch>
-      <Route path="/" component={MainScreen} exact />
-      <Route component={Error} />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<MainScreen />} />
+      <Route element={<Error />} />
+    </Routes>
   </>
 )
 
