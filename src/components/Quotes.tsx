@@ -48,12 +48,12 @@ const Link = styled.a`
 `
 
 interface Quote {
-  author: string;
-  text: string;
+  author: string
+  text: string
 }
 
 interface QuotesProps {
-  useCache?: boolean;
+  useCache?: boolean
 }
 
 const url = 'https://type.fit/api/quotes'
@@ -76,20 +76,21 @@ const renderQuote = (quote: Quote) => {
 //TODO resolve error with quotes.length property - change fixed 1964 value to quotes.length
 
 const Quotes = ({ useCache }: QuotesProps): JSX.Element => {
-  const { data: quotes, loading, error } = useRequest({ url });
+  const { data: quotes, loading, error } = useRequest({ url })
 
-  if (loading) return <Text>Loading...</Text>;
-  if (error) return <Text>There was an error!</Text>;
+  if (loading) return <Text>Loading...</Text>
+  if (error) return <Text>There was an error!</Text>
 
   return (
     <Container>
       <Text>
         {loading && <p>Loading...</p>}
         {error && <p>There was an error!</p>}
-        {quotes && renderQuote(quotes[getRandomIntInclusive({ min: 1, max: 1643 })])}
+        {quotes &&
+          renderQuote(quotes[getRandomIntInclusive({ min: 1, max: 1643 })])}
       </Text>
     </Container>
-  );
-};
+  )
+}
 
 export default Quotes
