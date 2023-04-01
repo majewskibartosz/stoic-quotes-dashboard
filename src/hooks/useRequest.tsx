@@ -18,7 +18,10 @@ interface UseRequestData {
   error: any;
 }
 
-const useRequest = ({ url, useCache = true }: UseRequestProps): UseRequestData => {
+const useRequest = ({
+  url,
+  useCache = true
+}: UseRequestProps): UseRequestData => {
   const [data, setData] = useState<CacheData>();
   const [error, setError] = useState<any>();
 
@@ -48,13 +51,13 @@ const useRequest = ({ url, useCache = true }: UseRequestProps): UseRequestData =
   return {
     data,
     loading,
-    error,
+    error
   };
 };
 
 useRequest.propTypes = {
   url: PropTypes.string.isRequired,
-  useCache: PropTypes.bool,
+  useCache: PropTypes.bool
 };
 
 export default useRequest;

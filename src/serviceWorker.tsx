@@ -38,7 +38,9 @@ const checkValidServiceWorker = (swUrl: string, config?: ConfigProps): void => {
       }
     })
     .catch(() => {
-      console.log('No internet connection found. App is running in offline mode.');
+      console.log(
+        'No internet connection found. App is running in offline mode.'
+      );
     });
 };
 
@@ -119,8 +121,8 @@ function registerValidSW(swUrl: string, config?: ConfigProps): void {
       };
     })
     .catch((error) => {
-      console.error('Error during service worker registration:', error)
-    })
+      console.error('Error during service worker registration:', error);
+    });
 }
 
 export function unregister(): void {

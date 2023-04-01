@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
-import Image from './Image'
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import Image from './Image';
 
 const Container = styled.div`
   width: 100%;
@@ -10,24 +10,25 @@ const Container = styled.div`
   object-position: 50% 50%;
   z-index: auto;
   background-color: black;
-`
+`;
 
 const Background = () => {
-  const [photo, setPhoto] = useState<string | undefined>()
+  const [photo, setPhoto] = useState<string | undefined>();
 
   useEffect(() => {
-    const url = 'https://source.unsplash.com/collection/477172/1600x900/daily' ?? ''
+    const url =
+      'https://source.unsplash.com/collection/477172/1600x900/daily' ?? '';
     const getRandomPhoto = () => {
-      setPhoto(url)
-    }
-    getRandomPhoto()
-  }, [])
+      setPhoto(url);
+    };
+    getRandomPhoto();
+  }, []);
 
   return (
     <Container>
       <Image src={photo ? photo : ''} />
     </Container>
-  )
-}
+  );
+};
 
-export default Background
+export default Background;

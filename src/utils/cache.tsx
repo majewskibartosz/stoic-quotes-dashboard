@@ -1,4 +1,5 @@
 interface CacheData {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
@@ -8,15 +9,14 @@ interface CacheFunctions {
 }
 
 const readFromCache: CacheFunctions['readFromCache'] = (url) => {
-  const cachedData = localStorage.getItem(url)
-  return cachedData ? JSON.parse(cachedData) : null
-}
+  const cachedData = localStorage.getItem(url);
+  return cachedData ? JSON.parse(cachedData) : null;
+};
 
 const writeToCache: CacheFunctions['writeToCache'] = (url, data) => {
   if (url) {
-    localStorage.setItem(url, JSON.stringify(data))
+    localStorage.setItem(url, JSON.stringify(data));
   }
-}
+};
 
-
-export { readFromCache, writeToCache }
+export { readFromCache, writeToCache };

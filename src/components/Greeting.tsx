@@ -1,14 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types';
-import styled from 'styled-components'
-import getGreeting from '../utils/getGreeting'
+import React from 'react';
+import styled from 'styled-components';
+import getGreeting from '../utils/getGreeting';
 
 const Container = styled.div`
   width: 100%;
   text-align: center;
   position: relative;
   z-index: 1;
-`
+`;
 
 const Text = styled.div`
   width: 100%;
@@ -25,14 +24,12 @@ const Text = styled.div`
   top: 51%;
   left: 50%;
   transform: translate(-50%, 60%);
-`
+`;
 
 const Greet = () => (
   <Container>
-    <Text>{getGreeting({time: new Date(Date.now()).getHours()})}</Text>
+    <Text>{getGreeting({ time: new Date(Date.now()).getHours() })}</Text>
   </Container>
-)
+);
 
-
-
-export default Greet
+export default Greet;

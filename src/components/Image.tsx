@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components'
-/* eslint react/prop-types: 0 */
+import styled from 'styled-components';
 
 const Img = styled.img`
   width: 100%;
@@ -9,16 +8,16 @@ const Img = styled.img`
   vertical-align: bottom;
   object-fit: cover;
   background-color: black;
-`
+`;
 
 interface Props {
   src: string;
 }
 
-const Image = ({ src }: Props) => <Img src={src} />
+const Image = ({ src }: Props) => <Img src={src} />;
 
 Image.propTypes = {
-  src: PropTypes.string.isRequired,
-}
+  src: PropTypes.string.isRequired
+};
 
-export default Image
+export default Image;

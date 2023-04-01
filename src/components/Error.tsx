@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
   width: 100%;
   text-align: center;
   position: relative;
   z-index: 1;
-`
+`;
 const Text = styled.h1`
   width: 100%;
   color: white;
@@ -22,12 +22,12 @@ const Text = styled.h1`
   top: 37%;
   left: 50%;
   transform: translate(-50%, 60%);
-`
+`;
 
 const Error: React.FC = () => (
   <Container>
     <Text>Oops! Page not found!</Text>
   </Container>
-)
+);
 
-export default Error
+export default Error;

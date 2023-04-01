@@ -1,10 +1,8 @@
-/* eslint-disable react/prop-types */
-import React from 'react'
+import React from 'react';
 
-import Quotes from './Quotes'
-import Clock from './Clock'
-import Greeting from './Greeting'
-
+import Quotes from './Quotes';
+import Clock from './Clock';
+import Greeting from './Greeting';
 
 const MainScreen = () => (
   <div>
@@ -12,6 +10,6 @@ const MainScreen = () => (
     <Greeting />
     <Quotes useCache={true} />
   </div>
-)
+);
 
-export default MainScreen
+export default MainScreen;

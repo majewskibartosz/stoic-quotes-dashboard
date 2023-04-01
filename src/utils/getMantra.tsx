@@ -1,8 +1,8 @@
-import getRandomIntInclusive from './getRandomIntInclusive'
+import getRandomIntInclusive from './getRandomIntInclusive';
 
 export type MantrasDictionary = {
-  [key: number]: string
-}
+  [key: number]: string;
+};
 
 export const mantras: string[] = [
   "Don't let your dreams be dreams.",
@@ -59,9 +59,12 @@ export const mantras: string[] = [
   'Be unstoppable.',
   'You are well.',
   'Create opportunities.'
-]
+];
 
 export const getMantra = (dictionary: MantrasDictionary): string => {
-  const randomNumber = getRandomIntInclusive({ min: 0, max: mantras.length - 1 });
+  const randomNumber = getRandomIntInclusive({
+    min: 0,
+    max: mantras.length - 1
+  });
   return dictionary[randomNumber];
-}
+};

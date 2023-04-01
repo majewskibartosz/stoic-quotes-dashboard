@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
 const Time = styled.div`
   font-family: Arial, Helvetica, sans-serif;
@@ -15,30 +15,30 @@ const Time = styled.div`
   top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
-`
+`;
 
 const Container = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
   z-index: 1;
-`
+`;
 
 interface Timer {
   date: Date;
 }
 
 const Clock: React.FC = () => {
-  const [timer, setTimer] = useState<Timer>({ date: new Date(Date.now()) })
+  const [timer, setTimer] = useState<Timer>({ date: new Date(Date.now()) });
 
   useEffect(() => {
-    const timerID = setInterval(() => tick(), 1000)
+    const timerID = setInterval(() => tick(), 1000);
     return () => {
-      clearInterval(timerID)
-    }
-  }, [])
+      clearInterval(timerID);
+    };
+  }, []);
 
-  const tick = () => setTimer({ date: new Date(Date.now()) })
+  const tick = () => setTimer({ date: new Date(Date.now()) });
 
   return (
     <Container>
@@ -47,7 +47,7 @@ const Clock: React.FC = () => {
         {timer.date.getMinutes()}
       </Time>
     </Container>
-  )
-}
+  );
+};
 
-export default Clock
+export default Clock;
