@@ -20,7 +20,7 @@ const App = () => (
     <Background />
     <Routes>
       <Route path="/" element={<MainScreen />} />
-      <Route element={<Error />} />
+      <Route path="*" element={<Error />} />
     </Routes>
   </>
 );
