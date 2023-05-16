@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
 import axios, { AxiosResponse } from 'axios';
 import PropTypes from 'prop-types';
