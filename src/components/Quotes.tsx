@@ -70,8 +70,6 @@ const renderQuote = (quote: Quote) => {
   );
 };
 
-//TODO resolve error with quotes.length property - change fixed 1964 value to quotes.length
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Quotes = ({ useCache }: QuotesProps): JSX.Element => {
   const { data: quotes, loading, error } = useRequest({ url });
@@ -85,7 +83,9 @@ const Quotes = ({ useCache }: QuotesProps): JSX.Element => {
         {loading && <p>Loading...</p>}
         {error && <p>There was an error!</p>}
         {quotes &&
-          renderQuote(quotes[getRandomIntInclusive({ min: 1, max: 1643 })])}
+          renderQuote(
+            quotes[getRandomIntInclusive({ min: 0, max: quotes.length - 1 })]
+          )}
       </Text>
     </Container>
   );
